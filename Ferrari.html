@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ferrari</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            widt:100%;
+        }
+        img {
+            cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td {
+            border: 1px white;
+            padding: 10px;
+        }
+        .iframe-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #007bba;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function Iframe(src) {
+            document.getElementById("ferrari-iframe").src = "https://www.ferrari.com/es-MX";
+        }
+    </script>
+</head>
+<body>
+<table>
+
+    <header style="text-align: center;" width="100%">
+    <h1><p style="color: green;">Programacion Web I</p></h1>
+        <h2><p style="color: red;">Evaluación practica Parcial 1</p></h2>
+        <h3>Profesora: MC Imelda Deyanira Hernández Martínez</h3>
+        <h4>Alumno: Yael Alejandro Velazquez Sierra</h4>
+        <h1><p style="color: red;">Ferrari</p></h1>
+    </header>
+
+    <table style="border: 2px white;">
+        <tr>
+            <td><p style="color: white;">................................</p></td>
+            <td><mark style="background-color: #EF1A2D;">Conoce más sobre Ferrari</mark></td>
+            <td><img src="imagenes/ferrari.jfif" alt="Página oficial de Ferrari" width="15%" onclick="Iframe()"></image></td>
+            <div class="iframe-container">
+            <td><iframe id="ferrari-iframe" src="" width="60%" height="250px"> </iframe></td>
+            </div>
+        </tr>
+
+        <tr>
+            <td><p style="color: white;">..............</p></td>
+            <td><img src="imagenes/carro1.png" width="150%"></td>
+            <td><img src="imagenes/carro2.jpg" width="30%"></td>
+            <td><img src="imagenes/carro3.png" width="100%"></td>
+        </tr>
+
+    </table>
+
+
+    <header style="text-align: center;">
+    </header>
+    <div class="footer">
+        Universidad Politécnica de San Luis Potosí
+    </div>
+
+    <address>Urbano Villalon 500. Col. La ladrillera</address>
+
+</body>
+</html>
