@@ -1,0 +1,26 @@
+body{
+	background-color: beige;
+}
+table{
+	width: 100%;
+	border: 1px solid gray;
+	border-collapse: collapse;
+	caption-size: top;
+}
+td,th{
+	border: 1px solid gray;
+}
+table tr:nth-child(odd){
+	background-color: white;
+}
+table tr:nth-child(even){
+	background-color: beige;
+}
+table tr th {
+	background-color: green;
+	color: white;
+}
+table tr:hover{
+	background-color: blue;
+	color: white;
+}
