@@ -85,3 +85,17 @@ body {
     background-color: #;
     border: 2px solid #000;
 }
+.video{
+    background-color: #FFD133;
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.videoS{
+  
+    transform: scale(1.0);
+    transform: scaleX(3.0);
+    transform-origin: center;
+
+}
+
