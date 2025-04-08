@@ -5,6 +5,13 @@ body{
 	text-align: center;
 }
 
+.galeria{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
 .galeria img{
 	width: 200px;
 	height: 200px;
