@@ -15,7 +15,3 @@ body{
 .boton:hover + .galeria{
 	visibility: hidden;
 }
-
-.boton{
-	padding: 15px;
-}
