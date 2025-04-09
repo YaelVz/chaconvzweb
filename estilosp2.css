@@ -1,8 +1,6 @@
 
 body {
-    background: linear-gradient(to bottom, white, aqua);
-    background: -moz-linear-gradient(top, white, aqua);
-    background: -webkit-linear-gradient(top, white, aqua);
+    background-color: aqua;
     text-align: center;
 }
 
