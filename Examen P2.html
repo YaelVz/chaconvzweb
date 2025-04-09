@@ -1,24 +1,30 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="estilosp2.css"> 
-    <title>Examen práctico Parcial 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilosp2.css"> 
+    <title>Examen práctico Parcial 2</title>
 </head>
 <body>
-    <h1>Examen práctico Parcial 2</h1>
-    <h2>Nombre del alumno(a): Yael Alejandro Velazquez Sierra </h2>
-    <div>
-    <div>
-       <button class="boton">Galeria de imagenes</button>
-    </div>
-    <div class="galeria">
-        <img src="SSJ.jfif" alt="Paisaje 1">
-        <img src="DFM.jfif" alt="Paisaje 2">
-        <img src="ADA.jfif" alt="Paisaje 3">
-        <img src="AMERI.jfif" alt="Paisaje 4">
-    </div>
-</div>
+    <h1>Examen práctico Parcial 2</h1>
+    <h2>Nombre del alumno(a): Yael Alejandro Velazquez Sierra </h2>
+    <div>
+        <button class="boton" onclick="toggleGaleria()">Galeria de imagenes</button>
+        <div class="galeria">
+            <img src="SSJ.jfif" alt="Paisaje 1">
+            <img src="DFM.jfif" alt="Paisaje 2">
+            <img src="ADA.jfif" alt="Paisaje 3">
+            <img src="AMERI.jfif" alt="Paisaje 4">
+        </div>
+    </div>
+    <script>
+        function toggleGaleria() {
+            const galeria = document.querySelector('.galeria');
+            galeria.style.visibility = galeria.style.visibility === 'hidden' ? 'visible' : 'hidden';
+        }
+    </script>
 </body>
 </html>
+
