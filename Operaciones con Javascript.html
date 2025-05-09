@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operaciones con Javascript</title>
+	<link rel="stylesheet" href="operaciones.css">
+	<script type="text/Javascript" src="Operaciones.js"></script>
+</head>
+<body>
+	<h1>Operaciones</h1>
+	<form>
+	<label for="num1">Escribe un numero</label>
+	<input type="text" name="num1" id="num1" placeholder="Escribe un numero"><br/>
+	<label for="num2">Escribe un numero</label>
+	<input type="text" name="num2" id="num2" placeholder="Escribe un numero"><br/><br/>
+	<input type="button" name="Suma" id="Suma" value="Suma" onclick="sumar()">
+	<input type="button" name="Restar" id="Restar" value="Restar" onclick="resta()">
+	<input type="button" name="Multiplica" id="Multiplica" value="Multiplica" onclick="multiplicar()">
+	<input type="button" name="Divide" id="Divide" value="Divide" onclick="dividir()">
+	</form><br/><br/>
+
+	El resultado es:
+	<p id="r"></p> 
+
+</body>
+</html>
