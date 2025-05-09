@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz FC Barcelona</title>
+  <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="Logo FC Barcelona">
+  <link rel="stylesheet" href="Barcelona.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <h1>¿Cuánto conoces del FC Barcelona?</h1>
+
+  <form id="formulario-quiz">
+    <label for="q1">1. ¿En qué año se fundó el FC Barcelona?</label>
+    <input type="text" name="q1" required>
+
+    <label for="q2">2. ¿Cuál es el estadio del FC Barcelona?</label>
+    <input type="text" name="q2" required>
+
+    <label for="q3">3. ¿Cuántas Champions League ha ganado el FC Barcelona hasta 2024?</label>
+    <input type="text" name="q3" required>
+
+    <label for="q4">4. ¿Quién es el máximo goleador histórico del club?</label>
+    <input type="text" name="q4" required>
+
+    <label for="q5">5. ¿Cuál es el apodo del FC Barcelona?</label>
+    <input type="text" name="q5" required>
+
+    <button type="submit">Enviar respuestas</button>
+  </form>
+
+  <div id="resultado">
+    <p id="puntaje"></p>
+  </div>
+
+  <div id="contenedor-grafica">
+    <canvas id="grafica"></canvas>
+  </div>
+
+  <div id="boton-pdf" style="display: none;">
+    <button onclick="generarPDF()">Descargar PDF</button>
+  </div>
+
+  <script src="Barcelona.js"></script>
+</body>
+</html>
