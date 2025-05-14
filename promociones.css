@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: 'Dancing Script', cursive;
+    font-size: 110%;
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    color: #212121;
+}
+
+.logito {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.menu {
+    text-align: center;
+    background-color: #f1948a;
+    padding: 40px;
+    margin-top: 20px ;
+}
+.menu h2 {
+    font-family: 'Georgia', serif;
+    font-size: 46px;
+    color: #212121;
+}
+.menu-productos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.menu-comida {
+    background: #212121;
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+}
+.menu-comida img {
+    width: 100%;
+    border-radius: 10px;
+}
+.menu-comida h3 {
+    margin: 10px 0;
+    font-size: 34px;
+    font-family: 'Georgia', serif;
+    color: #FFFFFF;
+}
+.menu-comida p {
+    font-size: 20px;
+    font-family: 'Consolas', ;
+    color: #FFFFFF;
+}
+.menu-comida span {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff336b;
+}
