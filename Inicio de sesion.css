@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor central usando flex */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* Tarjeta del formulario */
+.RegistroSesion {
+  background-color: white;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Títulos dentro del formulario */
+.RegistroSesion h3 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Etiquetas */
+.RegistroSesion label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.RegistroSesion input[type="email"],
+.RegistroSesion input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.RegistroSesion input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
