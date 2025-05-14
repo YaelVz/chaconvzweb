@@ -35,7 +35,7 @@ body {
 
 .nav-bar {
     position: fixed;
-    top: 100px;
+    top: 120px;
     width: 100%;
     background-color: #ffac40;
     z-index: 999;
