@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 10px;
+    box-shadow: 0 4px 6px rgb(255, 238, 0);
+}
+.perfil img, .carrito img {
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+}
+.logo img {
+    margin: 0;
+    width: 105px;
+    height: 105px;
+    width: 120px;
+    height: 120px;
+}
+.logo img:hover {
+    width: 105px;
+    height: 105px;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 120px;
+    width: 100%;
+    background-color: #ffac40;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.nav-bar button {
+    margin: 10px 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #ffac40c7;
+    cursor: pointer;
+    font-size: 16px;
+}
+.nav-bar button:hover {
+    background-color: rgb(199, 119, 0);
+    font-size: 14px;
+}
+.imagenes img {
+    width: 350px;
+    height: 250px;
+}
+.menu{
+    text-align: center;
+    background-color: #F3EEF8;
+    padding: 170px;
+    margin-top: 10px; /* Ajusta este valor según la altura combinada del header y la barra de navegación */
+}
+.menu-productos{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     flex-direction: row-reverse; 
+     padding: 10px;
+}
+.menu-comida{
+    background: #857E81;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+.menu-comida img{
+    width: 90%;
+    border-radius: 10px;
+}
+.menu-comida p{
+   font-size: ;
+    color: ;
+}
+.menu-comida span{
+    font-size: 20px;
+    font-weight: bold;
+    color: ;
+}
+.mapita{
+    text-align: center;
+    size: 5px;
+    padding: 5px;
+    margin-top: 15px;
+    justify-content: center;
+    background-color: #;
+    border: 2px solid #000;
+}
+.video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Elimina el borde del iframe */
+}
+
+.video video {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: auto; /* Ajusta la altura proporcionalmente */
+    display: block; /* Elimina espacios blancos alrededor del video */
+}
+
+.videos{
+  
+    transform: scale(1.0);
+    transform: scaleX(3.0);
+    transform-origin: center;
+
+}
+
+.contenedor {
+    max-width: 1200px; /* Ajusta este valor según el ancho deseado */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 15px;
+}
+

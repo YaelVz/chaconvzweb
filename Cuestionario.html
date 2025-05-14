@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Venta - TacoScript</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <div class="contenedor">
+    <img src="imagenes/Logo.png" alt="Logo" width="180" height="180" class="centrar-imagen">
+    <h1>TacoScript</h1>
+    <h2>Formulario de Compra</h2>
+
+    <form id="formularioVenta">
+      <div class="campo">
+        <label for="nombre">Nombre del cliente:</label>
+        <input type="text" id="nombre" required>
+      </div>
+
+      <div class="campo">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <h3>Menú</h3>
+
+      <div class="producto">
+        <label for="cant1">Taco Undefined ($80 la orden):</label>
+        <input type="number" id="cant1" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant2">Scope de Suadero ($80 la orden):</label>
+        <input type="number" id="cant2" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant3">QuesaSwitch ($60 solo queso):</label>
+        <input type="number" id="cant3" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant4">QuesaSwitch con proteína ($80):</label>
+        <input type="number" id="cant4" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant5">Arraychera ($70):</label>
+        <input type="number" id="cant5" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant6">Imelda'special ($80):</label>
+        <input type="number" id="cant6" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant7">Bistek code ($55):</label>
+        <input type="number" id="cant7" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant8">Horchatml ($35):</label>
+        <input type="number" id="cant8" min="0">
+      </div> 
+
+      <div class="producto">
+        <label for="cant9">Agua de Java-maica ($35):</label>
+        <input type="number" id="cant9" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant10">SodaScript ($45):</label>
+        <input type="number" id="cant10" min="0">
+      </div>
+
+      <div class="producto">
+        <label for="cant11">FizzBuzz Limón ($45):</label>
+        <input type="number" id="cant11" min="0">
+      </div>
+
+      <div class="resultado" id="total"></div>
+
+      <div class="botones">
+        <button type="button" onclick="calcularTotal()">Calcular Total</button>
+        <button type="button" onclick="generarPDF()">Generar Comprobante PDF</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
