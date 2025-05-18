@@ -32,7 +32,13 @@ function generarPDF() {
     return;
   }
 
-  calcularTotal(); // Asegura que el total esté actualizado antes de generar el PDF
+  calcularTotal();
+
+  // Construir el PDF
+  let y = 20;
+  doc.text("Comprobante de Compra - TacoScript", 20, y); y += 10;
+  doc.text(`Cliente: ${nombre}`, 20, y); y += 10;
+  doc.text(`Correo: ${email}`, 20, y); y += 10;
 
   const productos = [
     ["Taco Undefined", document.getElementById("cant1").value],
@@ -48,19 +54,29 @@ function generarPDF() {
     ["FizzBuzz Limón", document.getElementById("cant11").value]
   ];
 
-  let y = 20;
-  doc.text("Comprobante de Compra - TacoScript", 20, y); y += 10;
-  doc.text(`Cliente: ${nombre}`, 20, y); y += 10;
-  doc.text(`Correo: ${email}`, 20, y); y += 10;
-
-  productos.forEach(([nombreProd, cantidad]) => {
+  productos.forEach(([prod, cantidad]) => {
     if (parseInt(cantidad) > 0) {
-      doc.text(`${nombreProd}: ${cantidad}`, 20, y);
+      doc.text(`${prod}: ${cantidad}`, 20, y);
       y += 10;
     }
   });
 
   doc.text(`Total a pagar: $${totalFinal}`, 20, y + 5);
 
-  doc.save("comprobante_TacoScript.pdf");
+  // Convertir PDF a base64
+  const pdfBase64 = doc.output("datauristring");
+
+  // Enviar por correo usando EmailJS
+  emailjs.send("taco_script", "__ejs-test-mail-service__", {
+    nombre: nombre,
+    email: email,
+    pdf: pdfBase64
+  })
+  .then(() => {
+    alert("¡Comprobante enviado al correo exitosamente!");
+  })
+  .catch((error) => {
+    console.error("Error al enviar correo:", error);
+    alert("Hubo un problema al enviar el comprobante.");
+  });
 }
