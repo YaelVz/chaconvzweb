@@ -42,7 +42,7 @@ function generarPDF() {
 
   // Cargar imagen (usando promesa para esperar que cargue)
   const img = new Image();
-  img.src = LogoURL;
+  img.src = logoURL;
   img.onload = function () {
     doc.setFillColor(230, 230, 255); // Fondo encabezado
     doc.rect(0, 0, 210, 40, 'F'); // fondo azul claro
