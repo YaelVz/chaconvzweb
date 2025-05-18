@@ -34,7 +34,7 @@ function generarPDF() {
 
   calcularTotal();
 
-  // Construir el PDF
+  // Construir contenido del PDF
   let y = 20;
   doc.text("Comprobante de Compra - TacoScript", 20, y); y += 10;
   doc.text(`Cliente: ${nombre}`, 20, y); y += 10;
@@ -63,20 +63,24 @@ function generarPDF() {
 
   doc.text(`Total a pagar: $${totalFinal}`, 20, y + 5);
 
-  // Convertir PDF a base64
+  // Descargar el PDF en el navegador
+  doc.save("comprobante_TacoScript.pdf");
+
+  // Convertir a base64 para enviarlo por EmailJS
   const pdfBase64 = doc.output("datauristring");
 
-  // Enviar por correo usando EmailJS
+  // Enviar por correo
   emailjs.send("taco_script", "__ejs-test-mail-service__", {
     nombre: nombre,
     email: email,
     pdf: pdfBase64
   })
   .then(() => {
-    alert("¡Comprobante enviado al correo exitosamente!");
+    alert("¡Comprobante enviado al correo y descargado exitosamente!");
   })
   .catch((error) => {
     console.error("Error al enviar correo:", error);
     alert("Hubo un problema al enviar el comprobante.");
   });
 }
+
