@@ -1,0 +1,89 @@
+body {
+    background: #f4f6fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: #fff;
+    max-width: 400px;
+    margin: 60px auto 0 auto;
+    padding: 32px 28px 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+    border: 1.5px solid #328ff3;
+}
+
+button#Agregar {
+    padding: 10px 18px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background 0.2s;
+}
+
+button#Agregar:hover {
+    background: #0056b3;
+}
+
+ul#lista li {
+    background: #f8fafc;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    transition: background 0.2s;
+    border: 1px solid #e5e7eb;
+}
+
+ul#lista li.completada {
+    text-decoration: line-through;
+    color: #ff0000;
+    background: #ffeaea;
+}
+
+.btn-eliminar {
+    margin-left: 10px;
+    background: #ff5555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 4px 12px;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.btn-eliminar:hover {
+    background: #cc0000;
+}
