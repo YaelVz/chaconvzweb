@@ -4,6 +4,7 @@ body {
     padding: 0;
     text-align: center;
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -16,15 +17,15 @@ body {
     padding: 5px 10px;
     box-shadow: 0 4px 6px rgb(255, 238, 0);
 }
+
 .perfil img, .carrito img {
     margin: 0 5px;
     width: 40px;
     height: 40px;
 }
+
 .logo img {
     margin: 0;
-    width: 105px;
-    height: 105px;
     width: 120px;
     height: 120px;
 }
@@ -57,51 +58,97 @@ body {
     background-color: rgb(199, 119, 0);
     font-size: 14px;
 }
+
 .imagenes img {
     width: 350px;
     height: 250px;
 }
-.menu{
+
+/* ==== MENÚ RESPONSIVO ==== */
+.menu {
     text-align: center;
     background-color: #F3EEF8;
-    padding: 170px;
-    margin-top: 10px; /* Ajusta este valor según la altura combinada del header y la barra de navegación */
+    padding: 170px 20px 50px 20px;
+    margin-top: 10px;
 }
+
+.menu h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #c0392b;
+}
+
 .menu-productos {
-    display: flex;
-    justify-content: center;
-    align-items: stretch; /* Asegura que los elementos estén al mismo nivel */
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
     padding: 10px;
-  }
-  
-  .menu-comida {
-    background: #857E81;
+    justify-content: center;
+}
+
+.menu-comida {
+    background: #ffc251;
     padding: 25px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 190px; /* Reduce el ancho para que sean más delgados */
-    flex: 1 1 auto; /* Permite que los elementos se ajusten automáticamente */
-    margin: 10px; /* Añade espacio entre los elementos */
-  }
-  
-  .menu-comida img {
-    width: 90%;
     border-radius: 10px;
-  }
-  
-  .menu-comida p {
-    font-size: 16px; /* Ajusta el tamaño de fuente si es necesario */
-    color: #000; /* Define un color para el texto */
-  }
-  
-  .menu-comida span {
+    transition: transform 0.3s ease;
+}
+
+.menu-comida:hover {
+    transform: scale(1.05);
+}
+
+.menu-comida img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-comida h3 {
+    color: #000000;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.menu-comida p {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.menu-comida span {
     font-size: 20px;
     font-weight: bold;
-    color: #000; /* Define un color para el texto */
-  }
-.mapita{
+    color: #000;
+}
+
+/* Responsive para celulares */
+@media (max-width: 600px) {
+    .menu h2 {
+        font-size: 1.5rem;
+    }
+
+    .menu-comida {
+        padding: 15px;
+    }
+
+    .menu-comida h3 {
+        font-size: 1rem;
+    }
+
+    .menu-comida p {
+        font-size: 14px;
+    }
+
+    .menu-comida img {
+        height: 130px;
+    }
+}
+
+.mapita {
     text-align: center;
     size: 5px;
     padding: 5px;
@@ -110,41 +157,37 @@ body {
     background-color: #;
     border: 2px solid #000;
 }
+
 .video {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
-
 .video iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Elimina el borde del iframe */
+    border: none;
 }
-
 .video video {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    height: auto; /* Ajusta la altura proporcionalmente */
-    display: block; /* Elimina espacios blancos alrededor del video */
+    width: 100%;
+    height: auto;
+    display: block;
 }
-
-.videos{
-  
+.videos {
     transform: scale(1.0);
     transform: scaleX(3.0);
     transform-origin: center;
-
 }
 
 .contenedor {
-    max-width: 1200px; /* Ajusta este valor según el ancho deseado */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 15px;
 }
 
@@ -159,81 +202,131 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
+}
 
-  footer {
+footer {
     background-color: #001f7f;
     color: white;
     padding: 40px 20px;
     font-family: 'Arial', sans-serif;
-  }
-  
-  .footer-container {
+}
+
+.footer-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  .footer-section h4 {
+}
+
+.footer-section h4 {
     margin-bottom: 10px;
     font-size: 16px;
     text-transform: uppercase;
-  }
-  
-  .footer-section ul {
+}
+
+.footer-section ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer-section ul li {
+}
+
+.footer-section ul li {
     margin: 5px 0;
-  }
-  
-  .footer-section ul li a {
+}
+
+.footer-section ul li a {
     color: white;
     text-decoration: none;
-  }
-  
-  .footer-section p {
+}
+
+.footer-section p {
     margin: 5px 0;
-  }
-  
-  .social-icons img {
+}
+
+.social-icons img {
     width: 30px;
     margin-right: 10px;
     background-color: white;
     padding: 5px;
     border-radius: 5px;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     text-align: center;
     margin-top: 30px;
     border-top: 1px solid #ccc;
     padding-top: 20px;
-  }
-  
-  .footer-logo {
+}
+
+.footer-logo {
     width: 120px;
     margin-bottom: 10px;
-  }
-  
-  .footer-bottom a {
+}
+
+.footer-bottom a {
     color: #ff4a4a;
     text-decoration: none;
-  }
-  
-  .Desarrolladores{
-      border: black solid;
-  
-  }
-  .Derechos{
-      padding: 8px;
-      text-align: right;
-  }
-  
-  .Pie{
-      background-color: white;
-      color: black;
-  }
+}
+
+.Desarrolladores {
+    border: black solid;
+}
+
+.Derechos {
+    padding: 8px;
+    text-align: right;
+}
+
+.Pie {
+    background-color: white;
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #ffac40;
+        position: fixed;
+        top: 70px; /* debajo del header */
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-bar.open {
+        max-height: 500px; /* lo suficiente para mostrar todos los botones */
+    }
+
+    .nav-bar button {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 15px;
+        border-top: 1px solid #fff;
+        background-color: #ffac40c7;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+}
