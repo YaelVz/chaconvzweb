@@ -8,6 +8,9 @@
     <script src="TacoScript.js"></script>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvu0dcTGM8xAqIG3PulxgyBR7i7oOuBN4&loading=async&libraries=places&callback=initMap"></script>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        &#9776;
+    </div>
 </head>
 <body id="inicio">
     <header class="header">
@@ -27,7 +30,7 @@
         </div>
     </header>
 
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="navBar">
         <a><button>MENÚ</button></a>
         <a href="promociones_taco.html"><button>PROMOCIONES</button></a>
         <a><button>SOBRE NOSOTROS</button></a>
@@ -111,4 +114,10 @@
     <footer>Página web desarrollada para la materia de programacion web 1. Primavera 2025 Universidad politecnica de San Luis Potosí</footer>
     
 </body>
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navBar");
+    nav.classList.toggle("open");
+}
+</script>
 </html>
