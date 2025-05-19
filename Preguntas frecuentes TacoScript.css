@@ -1,4 +1,4 @@
-    body {
+body {
       font-family: Arial, sans-serif;
       background-color: #f9f9f9;
       margin: 0;
@@ -35,9 +35,54 @@
       margin: 10px 0 0;
       color: #666;
     }
+    .quejas-form {
+  background: #f8f8f8;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.quejas-form h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.quejas-form label {
+  font-weight: bold;
+  color: #444;
+}
+
+.quejas-form textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1em;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.quejas-form button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.quejas-form button:hover {
+  background: #0056b3;
+}
 
     @media (max-width: 600px) {
       .faq-container {
         padding: 10px;
       }
     }
+
