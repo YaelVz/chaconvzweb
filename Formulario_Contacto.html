@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Contacto.css">
+  <title>Contacto</title>
+
+ <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('r-sEq-onBqKmFhaut')
+</script>
+
+</head>
+<body>
+
+  <header>
+    <h1>Formulario de contacto</h1>
+  </header>
+
+  <div class="container">
+    <form id="form" class="quejas-form">
+      <h2>Quejas o sugerencias</h2>
+      <p>Déjanos tus comentarios, sugerencias o quejas para mejorar la calidad de nuestro sitio web.</p>
+
+      <div class="field">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" placeholder="Nombre" required>
+      </div>
+
+      <div class="field">
+        <label for="mail">Email:</label>
+        <input type="email" name="mail" id="mail" placeholder="Correo" required>
+      </div>
+
+      <div class="field">
+        <label for="sugerencias">Quejas o sugerencias:</label>
+        <textarea id="quejas" name="quejas" rows="4" placeholder="Escribe aquí tu queja o sugerencia" required></textarea>
+      </div>
+
+      <button type="submit" id="button">Enviar</button>
+    </form>
+  </div>
+
+  
+  <!-- Script para enviar EmailJS -->
+  <script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+    .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_4in8ioy';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Correo enviado correctamente');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+  </script>
+
+  
+</body>
+</html>
