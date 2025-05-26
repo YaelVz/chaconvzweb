@@ -16,6 +16,7 @@ body {
     align-items: center;
     padding: 5px 10px;
     box-shadow: 0 4px 6px rgb(255, 238, 0);
+    flex-wrap: wrap;
 }
 
 .perfil img, .carrito img {
@@ -29,6 +30,7 @@ body {
     width: 120px;
     height: 120px;
 }
+
 .logo img:hover {
     width: 105px;
     height: 105px;
@@ -45,7 +47,9 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    transition: max-height 0.3s ease-in-out;
 }
+
 .nav-bar button {
     margin: 10px 10px;
     padding: 10px 15px;
@@ -54,14 +58,16 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
+
 .nav-bar button:hover {
     background-color: rgb(199, 119, 0);
     font-size: 14px;
 }
 
 .imagenes img {
-    width: 350px;
-    height: 250px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
 }
 
 /* ==== MENÚ RESPONSIVO ==== */
@@ -126,6 +132,52 @@ body {
 }
 
 /* Responsive para celulares */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #ffac40;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-bar.open {
+        max-height: 500px;
+    }
+
+    .nav-bar button {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 15px;
+        border-top: 1px solid #fff;
+        background-color: #ffac40c7;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .perfil img, .carrito img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 @media (max-width: 600px) {
     .menu h2 {
         font-size: 1.5rem;
@@ -146,15 +198,28 @@ body {
     .menu-comida img {
         height: 130px;
     }
+
+    .footer-section {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+    .footer-section ul li a {
+        font-size: 14px;
+    }
 }
 
+/* Otros elementos */
 .mapita {
     text-align: center;
-    size: 5px;
     padding: 5px;
     margin-top: 15px;
     justify-content: center;
-    background-color: #;
+    background-color: #f0f0f0;
     border: 2px solid #000;
 }
 
@@ -166,6 +231,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .video iframe {
     position: absolute;
     top: 0;
@@ -174,13 +240,14 @@ body {
     height: 100%;
     border: none;
 }
+
 .video video {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .videos {
-    transform: scale(1.0);
     transform: scaleX(3.0);
     transform-origin: center;
 }
@@ -193,7 +260,7 @@ body {
 
 .info {
     text-align: center;
-    font-size: 16px; 
+    font-size: 16px;
     padding: 10px;
     margin-top: 15px;
     background-color: lightblue;
@@ -289,44 +356,3 @@ footer {
     z-index: 1001;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: #ffac40;
-        position: fixed;
-        top: 70px; /* debajo del header */
-        left: 0;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    .nav-bar.open {
-        max-height: 500px; /* lo suficiente para mostrar todos los botones */
-    }
-
-    .nav-bar button {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 15px;
-        border-top: 1px solid #fff;
-        background-color: #ffac40c7;
-    }
-
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .logo img {
-        width: 80px;
-        height: 80px;
-    }
-}
